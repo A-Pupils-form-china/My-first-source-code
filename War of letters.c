@@ -6,7 +6,7 @@
 #include <string.h>
 int main()
 {
-    char physicalmovies[100][30]= {" a              b  ", //0   ÉùÃ÷ÎïÀí¹¥»÷¶¯»­
+    char physicalmovies[100][30]= {" a              b  ", //0   å£°æ˜ç‰©ç†æ”»å‡»åŠ¨ç”»
                                    "  a             b  ",// 1
                                    "   a            b  ",// 2
                                    "    a           b  ",// 3
@@ -22,7 +22,7 @@ int main()
                                    "              a b  ",// 13
                                    "               ab  ",// 14
                                    "                ab ",// 15
-                                   //a¹¥»÷bµÄ¶¯»­0-15
+                                   //aæ”»å‡»bçš„åŠ¨ç”»0-15
                                    "  a              b ",// 16
                                    "  a             b  ",// 17
                                    "  a            b   ",// 18
@@ -39,13 +39,13 @@ int main()
                                    "  a b              ",// 29
                                    "  ab               ",// 30
                                    " ab                ",// 31
-                                   //b¹¥»÷aµÄ¶¯»­16-31
+                                   //bæ”»å‡»açš„åŠ¨ç”»16-31
                                    "               a b ",//32
-                                   //b±Ü¿ªa¹¥»÷µÄ¶¯»­
+                                   //bé¿å¼€aæ”»å‡»çš„åŠ¨ç”»
                                    "a b                ",//33
-                                   //a±Ü¿ªb¹¥»÷µÄ¶¯»­
+                                   //aé¿å¼€bæ”»å‡»çš„åŠ¨ç”»
                                   };
-    char magicalmovies[100][30]= {" a*             b ", //0      ÉùÃ÷Ä§·¨¹¥»÷¶¯»­
+    char magicalmovies[100][30]= {" a*             b ", //0      å£°æ˜é­”æ³•æ”»å‡»åŠ¨ç”»
                                   " a *            b ",//1
                                   " a  *           b ",//2
                                   " a   *          b ",//3
@@ -60,7 +60,7 @@ int main()
                                   " a            * b ",//12
                                   " a             *b ",//13
                                   " a               b",//14
-                                  //0-14 aÓÃÄ§·¨¹¥»÷bµÄ¶¯»­
+                                  //0-14 aç”¨é­”æ³•æ”»å‡»bçš„åŠ¨ç”»
                                   " a             *b ",//15
                                   " a            * b ",//16
                                   " a           *  b ",//17
@@ -102,7 +102,7 @@ int main()
         {
             printf("\t\tattack way:");
             scanf("%s",ch);
-            if(strcmp(command2,ch)==0)//ÎïÀí¹¥»÷
+            if(strcmp(command2,ch)==0)//ç‰©ç†æ”»å‡»
             {
                 if(round%2!=0)
                 {
@@ -207,7 +207,7 @@ int main()
                     }
                 }
             }
-            if(strcmp(command3,ch)==0)//Ä§·¨¹¥»÷
+            if(strcmp(command3,ch)==0)//é­”æ³•æ”»å‡»
             {
                 if(round%2!=0)
                 {
@@ -225,7 +225,7 @@ int main()
                         printf("%s",magicalmovies[i]);
                         if(i==13)
                         {
-                            printf("\n\tbÊÜµ½a%dµã¹¥»÷\a\n",power);
+                            printf("\n\tb was attack by a at %d points\a\n",power);
                             Sleep(250);
                             break;
                         }
@@ -248,7 +248,7 @@ int main()
                         printf("%s",magicalmovies[i]);
                         if(i==28)
                         {
-                            printf("\n\taÊÜµ½bµÄ%dµã¹¥»÷\a\n",power);
+                            printf("\n\ta was attacked by b at %d points\a\n",power);
                             Sleep(250);
                             break;
                         }
@@ -265,9 +265,9 @@ int main()
     system("cls");
     if(a<=0)
     {
-        printf("b»ñÊ¤");
+        printf("b win");
     }
     else
-        printf("a»ñÊ¤");
+        printf("a win");
     return 0;
 }
